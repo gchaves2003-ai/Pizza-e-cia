@@ -1,3 +1,25 @@
+// Criacao dinamica da barra de retorno ao curriculo
+function criarBarraNavegacao() {
+  const nav = document.createElement("nav");
+  nav.className = "nav-retorno";
+  nav.style.cssText = "background-color: #0f172a; padding: 12px 20px; border-bottom: 1px solid #334155; text-align: left;";
+
+  const link = document.createElement("a");
+  link.href = "https://meu-curriculo-digital-delta.vercel.app/";
+  link.textContent = "Voltar ao Curriculo";
+  link.style.cssText = "color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 0.9rem; font-family: sans-serif;";
+
+  link.addEventListener("mouseover", () => {
+    link.style.textDecoration = "underline";
+  });
+  link.addEventListener("mouseout", () => {
+    link.style.textDecoration = "none";
+  });
+
+  nav.appendChild(link);
+  document.body.insertBefore(nav, document.body.firstChild);
+}
+
 const cardapio = [
   { 
     id: 1, 
@@ -129,4 +151,6 @@ btnFinalizar.addEventListener("click", () => {
   }, 4000);
 });
 
+// Inicializacao da interface
+criarBarraNavegacao();
 renderizarCardapio();
