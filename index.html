@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizza & Cia - Otimização de Pedidos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Pizza & Cia</h1>
+      <p>Sistema Ágil de Gestão e Realização de Pedidos</p>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="cardapio-section">
+      <h2>Nosso Cardápio</h2>
+      <div id="grid-pizzas" class="grid-pizzas">
+        <!-- As pizzas serão carregadas dinamicamente via JS -->
+      </div>
+    </section>
+
+    <section class="carrinho-section">
+      <h2>Resumo do Pedido</h2>
+      <ul id="lista-carrinho" class="lista-carrinho">
+        <li class="carrinho-vazio">Seu carrinho está vazio.</li>
+      </ul>
+
+      <div class="total-box">
+        <span>Total:</span>
+        <strong id="valor-total">R$ 0,00</strong>
+      </div>
+
+      <button id="btn-finalizar" class="btn-primary" disabled>
+        Finalizar Pedido
+      </button>
+      
+      <div id="mensagem-sucesso" class="mensagem-sucesso hidden">
+        Pedido realizado com sucesso! Tempo estimado: 30 min.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Pizza & Cia &copy; 2026 - Projeto para Portfólio de Guilherme Chaves</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
